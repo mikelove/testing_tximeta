@@ -26,6 +26,7 @@ se0 <- tximeta(
 )
 
 txdb <- tximeta::retrieveDb(se)
+library(GenomicFeatures)
 txps <- transcripts(txdb)
 names(txps) <- txps$tx_name
 txps <- txps[!duplicated(names(txps))]
